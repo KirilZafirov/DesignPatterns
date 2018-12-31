@@ -14,11 +14,14 @@ export class InterestCalculationStrategyFactory {
     private goldAccount: InterestCalculationStrategy  = new GoldAccount();
     private premiumAccount: InterestCalculationStrategy = new PremiumAccount();
 
-    public getInterest = (accountType: AccountTypes): InterestCalculationStrategy => ({
+    constructor(private accountBalance: number) {
+
+    }
+    public getInterest = (accountType: AccountTypes): number => ({
             0: this.noAccount,  // AccountTypes.NoAccount
             1: this.basicAccount, // AccountTypes.BasicAccount
             2: this.silverAccount, // AccountTypes.SilverAccount
             3: this.goldAccount, // AccountTypes.GoldAccount
             4: this.premiumAccount, // AccountTypes.PremiumAccount
-            })[accountType]
+            })[accountType].calculateInterest(this.accountBalance)
 }

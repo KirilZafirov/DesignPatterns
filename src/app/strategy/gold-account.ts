@@ -2,6 +2,6 @@ import { InterestCalculationStrategy } from './calculation.strategy';
 
 export class GoldAccount implements InterestCalculationStrategy {
     calculateInterest(accountBalance: number): number {
-        return + accountBalance * (0.02 / 12);
+        return + accountBalance * (0.06 / 12);
     }
 }
