@@ -4,18 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StrategyModule } from './behavioralPatterns/strategy/strategy.module';
-import { FactoryComponent } from './structuralPatterns/factory/factory.component';
-import { FactoryModule } from './structuralPatterns/factory/factory.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppRoutingModule.components
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StrategyModule,
-    FactoryModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

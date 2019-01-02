@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StrategyComponent } from './strategy.component';
+import { StrategyRoutingModule } from './strategy-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [StrategyComponent],
-  exports: [StrategyComponent ],
+  imports: [CommonModule , RouterModule , StrategyRoutingModule],
+  declarations: [StrategyRoutingModule.components],
+  exports: [ StrategyRoutingModule.components ],
   providers: []
 })
 export class StrategyModule { }
