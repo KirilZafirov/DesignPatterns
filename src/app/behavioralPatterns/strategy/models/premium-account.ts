@@ -1,7 +1,8 @@
 import { InterestCalculationStrategy } from './calculation.strategy';
 
 export class PremiumAccount implements InterestCalculationStrategy {
+    private interest = (0.08 / 12);
     calculateInterest(accountBalance: number): number {
-        return + accountBalance * (0.08 / 12);
+        return + accountBalance * this.interest;
     }
 }

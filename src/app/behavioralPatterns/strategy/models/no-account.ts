@@ -1,7 +1,8 @@
 import { InterestCalculationStrategy } from './calculation.strategy';
 
 export class NoAccount implements InterestCalculationStrategy {
+    private interest = 0;
     calculateInterest(accountBalance: number): number {
-        return 0;
+        return + accountBalance * this.interest;
     }
 }
