@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StrategyModule } from './behavioralPatterns/strategy/strategy.module';
+import { FactoryComponent } from './structuralPatterns/factory/factory.component';
+import { FactoryModule } from './structuralPatterns/factory/factory.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { StrategyModule } from './behavioralPatterns/strategy/strategy.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StrategyModule
+    StrategyModule,
+    FactoryModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

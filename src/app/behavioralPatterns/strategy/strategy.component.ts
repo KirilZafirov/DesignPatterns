@@ -5,7 +5,7 @@ import { AccountTypes } from './models/account-type.enum';
 @Component({
   selector: 'app-strategy',
   templateUrl: './strategy.component.html',
-  styleUrls: ['./strategy.component.css']
+  styles: [``]
 })
 export class StrategyComponent implements OnInit {
 
@@ -36,5 +36,7 @@ export class StrategyComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  trackByFn(index, item) {
+    return index;
+  }
 }
