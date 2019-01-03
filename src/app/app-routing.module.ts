@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'factory', loadChildren: './structuralPatterns/factory/factory.module#FactoryModule' },
+  { path: 'factory', loadChildren: './creationalPatterns/factory/factory.module#FactoryModule' },
   { path: 'strategy', loadChildren: './behavioralPatterns/strategy/strategy.module#StrategyModule' },
   { path: '**', redirectTo: '/' }
 ];
