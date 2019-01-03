@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { InterestCalculationStrategyFactory } from './models/calculate-interest-factory';
 import { AccountTypes } from './models/account-type.enum';
 
 @Component({
   selector: 'app-strategy',
   templateUrl: './strategy.component.html',
-  styles: [``]
+  styles: [``],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StrategyComponent implements OnInit {
 

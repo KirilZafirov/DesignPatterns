@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Shape } from './models/shape';
 import { ShapeTypesEnum } from './models/shape.enum';
 import { ShapeFactory } from './models/shape-factory';
@@ -6,7 +6,8 @@ import { ShapeFactory } from './models/shape-factory';
 @Component({
   selector: 'app-factory',
   templateUrl: './factory.component.html',
-  styles: [``]
+  styles: [``],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FactoryComponent implements OnInit {
 
