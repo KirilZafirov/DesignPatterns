@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'factory', loadChildren: './creationalPatterns/factory/factory.module#FactoryModule' },
   { path: 'strategy', loadChildren: './behavioralPatterns/strategy/strategy.module#StrategyModule' },
+  { path: 'decorator', loadChildren: './structuralPatterns/decorator/decorator.module#DecoratorModule' },
   { path: '**', redirectTo: '/' }
 ];
 @NgModule({
